@@ -114,10 +114,24 @@ body {
   font-size: 1.2rem;
 }
 
+#btn-endroits {
+    cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
 @media (max-width: 720px) {
   :root {
     --primary-color: #ff66c4;
   }
+  #btn-endroits {
+  background-color: var(--primary-color);
+}
 
   .bottom-section {
     justify-content: center;
@@ -149,7 +163,9 @@ body {
   :root {
     --primary-color: #00bf63;
   }
-
+  #btn-endroits {
+  background-color: var(--primary-color);
+}
   .bottom-section {
     justify-content: center;
   }
