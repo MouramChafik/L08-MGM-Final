@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #0097b2;
+  --text-bar-bg: #545454;
+  --text-bar-color: white;
+  --text-vert: #00bf63;
+  --text-rose: #ff66c4;
+  --badge-size: 50px;
+  --padding: 16px;
+  --image-size: 300px;
+  --circle-size: 80px;
+  --font-size-title: 5rem;
+  --gap: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: var(--padding);
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.main-image {
+  width: var(--image-size);
+  height: var(--image-size);
+  object-fit: cover;
+}
+
+.title-section h1 {
+  margin: 0;
+  font-size: var(--font-size-title);
+}
+
+.badges {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  width: var(--badge-size);
+  height: var(--badge-size);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.badge.empty {
+  background-color: var(--primary-color);
+}
+
+.text-bar {
+  background-color: var(--text-bar-bg);
+  color: var(--text-bar-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 20px 0;
+  display: inline-block;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.separator {
+  border: none;
+  border-top: 3px solid #111;
+  margin: 20px 0;
+}
+
+.bottom-section {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.circle-image {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.blue-box {
+  background-color: var(--primary-color);
+  height: auto;
+  flex: 1;
+  margin-top: 2rem;
+  display: flex;
+}
+.blue-box p {
+  color: white;
+  margin-top: 2rem;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --primary-color: #ff66c4;
+  }
+
+  .bottom-section {
+    justify-content: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .title-section {
+    order: 1;
+  }
+
+  .main-image {
+    order: 3;
+  }
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    justify-content: center;
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  :root {
+    --primary-color: #00bf63;
+  }
+
+  .bottom-section {
+    justify-content: center;
+  }
+}
